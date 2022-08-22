@@ -24,7 +24,7 @@ The results of our analysis show that out of 240,124 total current employees, th
 - there is a high number of employees retiring at once (over 17.2% of the total current workforce!),
 - there will be many spots open that need to be filled,
 - there is a low number of employees that are eligible for the mentorship program (3.7% of those getting ready to retire), and
-- there is a relatively low percentage of employees from the Sales and Development departments that are retiring (36.6%).
+- there is a relatively high percentage of employees from the Sales and Development departments that are retiring (36.6%).
 
 ## Summary
 
@@ -42,3 +42,9 @@ There are two questions that naturally arise when looking at the analysis:
     ![Schema: Mentorship Eligibility](Resources/code_for_mentorship_eligible.png)
     
     ![Schema: Mentorship Eligibility](Resources/code_for_mentorship_eligible_2.png)
+
+## Concerns and difficulties
+
+At the end of completing Deliverables 1 & 2, I questioned whether or not some of the tables that we created in the past were correct. It seems like there are two different counts for the amount of people that are retiring: when taking a look at the `retiring_titles_count` table, we can see that there are a total of 72,458 entries compared to the 41,380 count that we took from the `retirement_info` table that we created. 
+
+Then from the `current_emp` table, there are only 33,118 entries - this count should not be lower than the number of employees that are retiring.
