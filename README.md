@@ -27,3 +27,9 @@ The results of our analysis show that out of 240,124 total current employees, th
 - there is a relatively low percentage of employees from the Sales and Development departments that are retiring (36.6%).
 
 ## Summary
+
+There are two questions that naturally arise when looking at the analysis:
+1. How many roles will need to be filled as the "silver tsunami" begins to make it impact?
+    - There are 41,380 roles that will need to be filled. This info comes from our `retirement_info` table that we created. It contains the employee number, first name, and last name of all of the employees that will be retiring soon. The query to filter the data for this table can be found in the image below:
+    ![Schema: Retirement Eligibility](Resources/code_for_retirement_eligibility.png)
+3. Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
