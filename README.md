@@ -23,13 +23,22 @@ We were working with lists of the company's complete history of employees and ex
 The results of our analysis show that out of 240,124 total current employees, there are __41,380 employees that will be retiring soon__, and that there are __1,549 employees who are eligible for the mentorship program__. This means a few things:
 - there is a high number of employees retiring at once (over 17.2% of the total current workforce!),
 - there will be many spots open that need to be filled,
-- there is a low number of employees that are eligible for the mentorship program (3.7%), and
+- there is a low number of employees that are eligible for the mentorship program (3.7% of those getting ready to retire), and
 - there is a relatively low percentage of employees from the Sales and Development departments that are retiring (36.6%).
 
 ## Summary
 
 There are two questions that naturally arise when looking at the analysis:
-1. How many roles will need to be filled as the "silver tsunami" begins to make it impact?
+1. _How many roles will need to be filled as the "silver tsunami" begins to make it impact?_
     - There are 41,380 roles that will need to be filled. This info comes from our `retirement_info` table that we created. It contains the employee number, first name, and last name of all of the employees that will be retiring soon. The query to filter the data for this table can be found in the image below:
-    ![Schema: Retirement Eligibility](Resources/code_for_retirement_eligibility.png)
-3. Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
+    
+    ![Schema: Retirement Eligibility](Resources/code_for_retirement_eligible.png)
+    
+    This returns a table of 41,380 currently employed people who are eligible for retirement.
+    
+2. _Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett-Hackard employees?_
+    - There are not enough qualified employees in the departments to mentor the next generation of PH employees who will take the place of everyone who will retire. There are only 1,549 employees who are eligible for the mentorship program. That is only 3.7% of the number of employees who are getting ready to retire. There will still be 39,831 positions available - that is far too much for those in the mentorship program to handle alone! In the bottom left hand corner of the first image below, we can see that there are only a total of 1,549 entries in our `mentorship_eligible` table. The table consists of the `employee number`, `first and last names`, and `birth dates` from the `employees` table, the `from and to dates` from the `dept_employee` table, and the `title` from the `titles` table. An inner join was done on the `employees` and `dept_employee` tables, and then another inner join was done on the `dept_employee` and `titles` table to get the necessary information. Filters on the to date on the birthdate were done so that only current employees would be returned.
+    
+    ![Schema: Mentorship Eligibility](Resources/code_for_mentorship_eligible.png)
+    
+    ![Schema: Mentorship Eligibility](Resources/code_for_mentorship_eligible_2.png)
