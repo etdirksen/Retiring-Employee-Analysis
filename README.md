@@ -1,4 +1,4 @@
-# PostgresSQL Analysis: Retiring Employees
+# PostgreSQL Analysis: Retiring Employees
 
 ## Purpose and Background
 
